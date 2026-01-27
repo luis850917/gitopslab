@@ -1,7 +1,7 @@
 variable "environment" {
   description = "Environment name"
   type        = string
-  default     = "dev"
+  default     = "qa"
 }
 
 variable "cluster_name" {
