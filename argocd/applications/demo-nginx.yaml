@@ -11,7 +11,7 @@ spec:
     path: apps/nginx/helm
     helm:
       valueFiles:
-        - ../../environments/demo/qa/values.yaml
+        - ../../../environments/demo/qa/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: demo
