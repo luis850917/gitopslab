@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-nginx
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/luis850917/gitoslab.git
+    targetRevision: main
+    path: apps/nginx/helm
+    helm:
+      valueFiles:
+        - ../../environments/demo/qa/values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: demo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
