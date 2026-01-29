@@ -1,11 +1,9 @@
 variable "environment" {
   description = "Environment name"
-  type        = string
-  default     = "qa"
+  type        = string  
 }
 
 variable "cluster_name" {
   description = "Kubernetes cluster name"
-  type        = string
-  default     = "gitops-lab"
+  type        = string  
 }
