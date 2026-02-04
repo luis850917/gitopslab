@@ -9,7 +9,8 @@ spec:
   source:
     repoURL: https://github.com/luis850917/gitopslab.git
     targetRevision: HEAD
-    path: dev
+    path: apps/nanuchi-app/dev
+
   destination: 
     server: https://kubernetes.default.svc
     namespace: demo
